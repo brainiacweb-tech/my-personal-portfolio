@@ -54,8 +54,11 @@
     });
   });
 
-  // Wire up hamburger button manually (Bootstrap already handles it via data attrs,
-  // but we also manage the custom toggler)
+  // Sync hamburger X animation with Bootstrap collapse state
+  navCollapse.addEventListener('show.bs.collapse', () => navbar.classList.add('menu-open'));
+  navCollapse.addEventListener('hide.bs.collapse', () => navbar.classList.remove('menu-open'));
+
+  // Wire up hamburger button manually
   if (toggler) {
     toggler.addEventListener('click', () => {
       const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse);
