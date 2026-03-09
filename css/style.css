@@ -484,6 +484,15 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
 }
 
+/* Small variants used in project cards */
+.btn-sm.btn-primary-custom,
+.btn-sm.btn-outline-custom,
+.btn-sm.btn-ghost-custom {
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
 /* Hero socials */
 .hero-socials a,
 .contact-socials a,
