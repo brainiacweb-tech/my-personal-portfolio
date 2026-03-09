@@ -1117,28 +1117,163 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    RESPONSIVE TWEAKS
    ============================================================ */
+
+/* Prevent any horizontal overflow */
+body { overflow-x: hidden; }
+
+/* ---- Tablet / Large Mobile (≤ 991px) ---- */
 @media (max-width: 991px) {
   .section-pad { padding: 70px 0; }
-  .hero-section { padding: 110px 0 70px; }
+
+  /* Hero */
+  .hero-section { padding: 110px 0 60px; }
   .hero-text { text-align: center; }
-  .hero-bio { max-width: 100%; }
+  .hero-bio { max-width: 100%; margin-left: auto; margin-right: auto; }
   .hero-buttons { justify-content: center; }
   .hero-socials { justify-content: center; }
+  .hero-text .btn-primary-custom,
+  .hero-text .btn-outline-custom,
+  .hero-text .btn-ghost-custom { min-width: 160px; }
+
+  /* About */
   .about-text { text-align: left; }
+  .about-img-frame { margin: 0 auto; }
+
+  /* Contact */
   .contact-form { padding: 24px; }
+  .contact-info-title { text-align: center; }
+  .contact-info-text { text-align: center; }
+  .contact-details { align-items: flex-start; }
+  .contact-socials { justify-content: center; }
+
+  /* Footer */
+  .footer .col-md-4 { text-align: center !important; }
+  .footer-brand { justify-content: center; }
 }
 
+/* ---- Mobile (≤ 767px) ---- */
 @media (max-width: 767px) {
   .section-pad { padding: 56px 0; }
-  .profile-wrapper { width: 260px; height: 260px; }
+
+  /* Hero */
+  .hero-section { padding: 100px 0 52px; }
+  .profile-wrapper { width: 240px; height: 240px; }
+  .profile-ring   { inset: -8px; }
+  .profile-ring-2 { inset: -16px; }
+
+  /* About */
+  .about-img-frame { width: 100%; max-width: 300px; }
+  .about-img { aspect-ratio: 4/3; }
+
+  /* Skills */
+  .skills-category-title { font-size: 1rem; }
+
+  /* Projects — filter buttons wrap cleanly */
+  .filter-btn { padding: 7px 16px; font-size: 0.82rem; }
+
+  /* Services */
+  .service-card { padding: 26px 18px 22px; }
+
+  /* Contact */
   .contact-form { padding: 20px 16px; }
+
+  /* Section header */
+  .section-header { margin-bottom: 2rem; }
 }
 
+/* ---- Small Mobile (≤ 576px) ---- */
 @media (max-width: 576px) {
-  .hero-buttons { flex-direction: column; align-items: center; }
+  .section-pad { padding: 48px 0; }
+
+  /* Navbar */
+  #mainNavbar { padding: 10px 0; }
+  .brand-logo { height: 36px; width: 115px; }
+
+  /* Hero */
+  .hero-section { padding: 88px 0 44px; }
+  .hero-greeting { font-size: 0.85rem; letter-spacing: 1.5px; }
+  .hero-name { font-size: clamp(1.8rem, 9vw, 2.4rem); }
+  .hero-title { font-size: clamp(0.95rem, 4vw, 1.2rem); }
+  .hero-bio { font-size: 0.88rem; }
+  .profile-wrapper { width: 200px; height: 200px; }
+  .profile-ring   { inset: -6px; }
+  .profile-ring-2 { inset: -12px; }
+  .dot-1 { width: 13px; height: 13px; }
+  .dot-2 { width: 9px;  height: 9px; }
+  .dot-3 { width: 6px;  height: 6px; left: -2px; }
+  /* Reduce row gap between profile image and text on mobile */
+  .hero-section .row.gy-5 { --bs-gutter-y: 1.5rem; }
+
+  /* Hero buttons — stack full width */
+  .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
   .hero-buttons .btn-primary-custom,
   .hero-buttons .btn-outline-custom,
-  .hero-buttons .btn-ghost-custom { width: 100%; max-width: 280px; text-align: center; }
+  .hero-buttons .btn-ghost-custom {
+    width: 100%; max-width: 290px;
+    text-align: center; justify-content: center;
+    display: flex;
+  }
+
+  /* Section headers */
+  .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .section-label { font-size: 0.72rem; letter-spacing: 2px; }
+
+  /* About */
+  .about-subtitle { font-size: 1.05rem; }
+  .about-img-frame { max-width: 260px; }
+  .about-img { aspect-ratio: 1/1; }
+  .about-info-card { padding: 12px 10px; gap: 10px; }
+  .about-info-card h6 { font-size: 0.78rem; }
+  .about-info-card p  { font-size: 0.78rem; }
+
+  /* Skills cards — 2 per row on narrow screens */
+  .skill-card { padding: 16px 8px 12px; }
+  .skill-card i { font-size: 1.5rem; }
+  .skill-card p { font-size: 0.75rem; }
+
+  /* Projects — filter buttons scroll horizontally */
+  .d-flex.flex-wrap.justify-content-center.gap-2.mb-5 {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .d-flex.flex-wrap.justify-content-center.gap-2.mb-5::-webkit-scrollbar { display: none; }
+  .filter-btn { white-space: nowrap; flex-shrink: 0; }
+
+  /* Services */
+  .service-card { padding: 22px 16px 18px; }
+  .service-icon-wrap { width: 58px; height: 58px; }
+  .service-icon-wrap i { font-size: 1.45rem; }
+  .service-title { font-size: 0.92rem; }
+  .service-desc  { font-size: 0.8rem; }
+
+  /* Contact */
+  .contact-form { padding: 18px 14px; }
+  .contact-info-title { font-size: 1.15rem; }
+  .contact-detail-icon { width: 38px; height: 38px; font-size: 0.88rem; }
+  .custom-input { padding: 10px 12px; font-size: 0.85rem; }
+
+  /* Footer */
+  .footer { padding: 22px 0; }
+  .footer-copy { font-size: 0.78rem; }
+  .footer-socials a { width: 36px; height: 36px; font-size: 0.88rem; }
+
+  /* FAB & back-to-top */
+  .whatsapp-fab { right: 14px; bottom: 72px; width: 46px; height: 46px; font-size: 1.35rem; }
+  .back-to-top  { right: 14px; bottom: 18px; width: 40px; height: 40px; }
+}
+
+/* ---- Very small phones (≤ 400px) ---- */
+@media (max-width: 400px) {
+  .hero-name { font-size: 1.7rem; }
+  .profile-wrapper { width: 175px; height: 175px; }
+  .about-img-frame { max-width: 230px; }
+  .filter-btn { padding: 6px 12px; font-size: 0.78rem; }
+  .project-title { font-size: 0.92rem; }
+  .contact-form .row.g-3 { --bs-gutter-y: 0.6rem; }
 }
 
 /* ============================================================
