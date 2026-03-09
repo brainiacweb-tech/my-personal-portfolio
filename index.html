@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Francis Kusi – Web Developer, IT Support Specialist & Tech Enthusiast. Personal portfolio website." />
+  <title>Francis Kusi | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== PAGE LOADER ===================== -->
+  <div id="page-loader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <!-- Scroll progress bar -->
+  <div id="scrollProgress"></div>
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-logo" role="img" aria-label="Francis Kusi"></span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <button class="navbar-toggler" type="button" id="navToggler" aria-label="Toggle navigation">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#hero"><i class="fas fa-house nav-icon"></i><span>Home</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user nav-icon"></i><span>About</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-bolt nav-icon"></i><span>Skills</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-folder-open nav-icon"></i><span>Projects</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-tools nav-icon"></i><span>Services</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope nav-icon"></i><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero-section d-flex align-items-center">
+    <!-- Background doodles -->
+    <div class="doodle-bg" aria-hidden="true">
+      <span class="dk dk-code" style="top:6%;left:3%">&lt;/&gt;</span>
+      <span class="dk dk-code" style="top:14%;right:5%">{ }</span>
+      <span class="dk dk-code" style="bottom:16%;left:5%">( )</span>
+      <span class="dk dk-code" style="bottom:8%;right:8%">=&gt;</span>
+      <span class="dk dk-code" style="top:42%;left:1.5%">//</span>
+      <span class="dk dk-code" style="top:55%;right:2%">&#35;</span>
+      <span class="dk dk-code" style="bottom:32%;right:5%">&#42;&#42;</span>
+      <svg class="dk dk-svg" style="top:2%;right:8%;width:90px;height:90px" viewBox="0 0 90 90"><circle cx="45" cy="45" r="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="9 6"/></svg>
+      <svg class="dk dk-svg" style="bottom:4%;left:1%;width:80px;height:80px" viewBox="0 0 80 80"><rect x="4" y="4" width="72" height="72" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="8 5" rx="6"/></svg>
+      <svg class="dk dk-svg" style="top:62%;right:4%;width:54px;height:54px" viewBox="0 0 54 54"><polygon points="27,3 51,50 3,50" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/></svg>
+      <svg class="dk dk-svg" style="top:28%;left:3%;width:46px;height:46px" viewBox="0 0 46 46"><line x1="23" y1="2" x2="23" y2="44" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 3"/><line x1="2" y1="23" x2="44" y2="23" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 3"/></svg>
+      <svg class="dk dk-svg" style="bottom:22%;left:6%;width:38px;height:38px" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/></svg>
+      <span class="dk dk-dot" style="top:10%;left:22%"></span>
+      <span class="dk dk-dot" style="top:72%;left:44%"></span>
+      <span class="dk dk-dot" style="top:48%;right:18%"></span>
+      <span class="dk dk-dot" style="bottom:25%;right:30%"></span>
+      <span class="dk dk-ring" style="top:80%;right:12%;width:28px;height:28px"></span>
+      <span class="dk dk-ring" style="top:4%;left:42%;width:22px;height:22px"></span>
+    </div>
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 order-2 order-lg-1 hero-text reveal-left">
+          <p class="hero-greeting">Hello, I&apos;m</p>
+          <h1 class="hero-name">Francis Kusi</h1>
+          <h2 class="hero-title">
+            I&apos;m a <span id="typed-text" class="typed-accent"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-bio mt-3">
+            Passionate about building clean web experiences and solving real-world IT challenges.
+            Based in Ghana, open to remote &amp; on-site opportunities worldwide.
+          </p>
+          <div class="hero-buttons mt-4 d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-primary-custom">
+              <i class="fas fa-code me-2"></i>View Projects
+            </a>
+            <a href="assets/Francis_Kusi_CV.pdf" download class="btn btn-outline-custom">
+              <i class="fas fa-download me-2"></i>Download CV
+            </a>
+            <a href="#contact" class="btn btn-ghost-custom">
+              <i class="fas fa-paper-plane me-2"></i>Contact Me
+            </a>
+          </div>
+          <div class="hero-socials mt-4 d-flex gap-3">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-kusi-1b643a258" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:francis@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-center reveal-right">
+          <div class="profile-wrapper">
+            <img src="images/image 1.jpg" alt="Francis Kusi" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Francis+Kusi&size=400&background=0d6efd&color=fff&bold=true&font-size=0.33'" />
+            <div class="profile-ring"></div>
+            <div class="profile-ring-2"></div>
+            <div class="profile-dot dot-1"></div>
+            <div class="profile-dot dot-2"></div>
+            <div class="profile-dot dot-3"></div>
+            <!-- Floating stat badges -->
+            <div class="hero-stat stat-projects">
+              <div class="hero-stat-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <div class="hero-stat-num counter-num" data-target="20">0</div>
+                <div class="hero-stat-label">Projects Done</div>
+              </div>
+            </div>
+            <div class="hero-stat stat-exp">
+              <div class="hero-stat-icon"><i class="fas fa-star"></i></div>
+              <div>
+                <div class="hero-stat-num counter-num" data-target="3">0</div>
+                <div class="hero-stat-label">Years Exp.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section-pad bg-light-custom">
+    <div class="doodle-bg" aria-hidden="true">
+      <span class="dk dk-code" style="top:8%;right:4%">{ }</span>
+      <span class="dk dk-code" style="bottom:10%;left:4%">&lt;/&gt;</span>
+      <svg class="dk dk-svg" style="top:4%;left:5%;width:72px;height:72px" viewBox="0 0 72 72"><circle cx="36" cy="36" r="32" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8 5"/></svg>
+      <svg class="dk dk-svg" style="bottom:4%;right:3%;width:62px;height:62px" viewBox="0 0 62 62"><rect x="4" y="4" width="54" height="54" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 5" rx="5"/></svg>
+      <svg class="dk dk-svg" style="top:45%;right:2%;width:42px;height:42px" viewBox="0 0 42 42"><polygon points="21,3 39,39 3,39" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/></svg>
+      <span class="dk dk-dot" style="top:35%;left:2%"></span>
+      <span class="dk dk-dot" style="top:65%;right:5%"></span>
+      <span class="dk dk-ring" style="top:18%;right:14%;width:24px;height:24px"></span>
+    </div>
+    <div class="container">
+      <div class="section-header text-center mb-5 reveal-up">
+        <span class="section-label">Get To Know</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5 d-flex justify-content-center reveal-left">
+          <div class="about-img-frame">
+            <img src="images/image 1.jpg" alt="Francis Kusi" class="about-img" onerror="this.src='https://ui-avatars.com/api/?name=Francis+Kusi&size=400&background=222222&color=fff&bold=true&font-size=0.33'" />
+          </div>
+        </div>
+        <div class="col-lg-7 reveal-right">
+          <h3 class="about-subtitle">Web Developer &amp; IT Support Specialist</h3>
+          <p class="about-text">
+            I am <strong>Francis Kusi</strong>, a dedicated and passionate tech professional from Ghana
+            with a strong foundation in web development and IT support. I enjoy turning complex
+            problems into simple, beautiful, and intuitive digital solutions.
+          </p>
+          <p class="about-text">
+            My journey in technology started with a curiosity for how computers work, which grew into
+            a deep passion for building web applications and providing reliable IT support services
+            to individuals and businesses.
+          </p>
+
+          <div class="row g-3 mt-2">
+            <div class="col-sm-6">
+              <div class="about-info-card">
+                <i class="fas fa-graduation-cap about-icon"></i>
+                <div>
+                  <h6>Education</h6>
+                  <p>Information Technology &amp; Computer Science</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="about-info-card">
+                <i class="fas fa-map-marker-alt about-icon"></i>
+                <div>
+                  <h6>Location</h6>
+                  <p>Ghana, West Africa</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="about-info-card">
+                <i class="fas fa-briefcase about-icon"></i>
+                <div>
+                  <h6>Experience</h6>
+                  <p>Web Dev &amp; IT Support Projects</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="about-info-card">
+                <i class="fas fa-bullseye about-icon"></i>
+                <div>
+                  <h6>Goal</h6>
+                  <p>Full-Stack Developer &amp; IT Consultant</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="assets/Francis_Kusi_CV.pdf" download class="btn btn-primary-custom me-3">
+              <i class="fas fa-download me-2"></i>Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline-custom">
+              <i class="fas fa-paper-plane me-2"></i>Hire Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills" class="section-pad">
+    <div class="doodle-bg" aria-hidden="true">
+      <span class="dk dk-code" style="top:6%;right:5%">( )</span>
+      <span class="dk dk-code" style="bottom:8%;left:4%">=&gt;</span>
+      <svg class="dk dk-svg" style="top:3%;left:4%;width:66px;height:66px" viewBox="0 0 66 66"><polygon points="33,4 62,60 4,60" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+      <svg class="dk dk-svg" style="bottom:4%;right:4%;width:58px;height:58px" viewBox="0 0 58 58"><circle cx="29" cy="29" r="25" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+      <svg class="dk dk-svg" style="top:50%;right:2%;width:44px;height:44px" viewBox="0 0 44 44"><line x1="22" y1="2" x2="22" y2="42" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><line x1="2" y1="22" x2="42" y2="22" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/></svg>
+      <span class="dk dk-dot" style="top:50%;left:1%"></span>
+      <span class="dk dk-dot" style="top:28%;right:2%"></span>
+      <span class="dk dk-ring" style="bottom:18%;left:6%;width:26px;height:26px"></span>
+    </div>
+    <div class="container">
+      <div class="section-header text-center mb-5 reveal-up">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">My Skills</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="row gy-5">
+        <!-- Web Dev Skills -->
+        <div class="col-lg-6 reveal-left">
+          <h4 class="skills-category-title"><i class="fas fa-code me-2 accent-color"></i>Web Development</h4>
+          <div class="skills-bars mt-4">
+
+            <div class="skill-item" data-percent="90">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fab fa-html5 me-2"></i>HTML5</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="85">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fab fa-css3-alt me-2"></i>CSS3</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="80">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fab fa-bootstrap me-2"></i>Bootstrap</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="75">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fab fa-js-square me-2"></i>JavaScript</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="65">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fab fa-python me-2"></i>Python</span>
+                <span class="skill-percent">65%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="70">
+              <div class="d-flex justify-content-between mb-1">
+                <span class="skill-name"><i class="fas fa-database me-2"></i>MySQL</span>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="progress skill-progress">
+                <div class="progress-bar" role="progressbar" style="width:0%" data-width="70%"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- IT Skills -->
+        <div class="col-lg-6 reveal-right">
+          <h4 class="skills-category-title"><i class="fas fa-tools me-2 accent-color"></i>IT Support &amp; Tools</h4>
+          <div class="row g-3 mt-2">
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-wrench"></i>
+                <p>Computer Repair</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fab fa-windows"></i>
+                <p>Windows Install</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-file-word"></i>
+                <p>MS Office</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-network-wired"></i>
+                <p>Networking</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-shield-alt"></i>
+                <p>Cybersecurity</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-cloud"></i>
+                <p>Cloud Basics</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fab fa-git-alt"></i>
+                <p>Git &amp; GitHub</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-paint-brush"></i>
+                <p>Graphic Design</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4">
+              <div class="skill-card text-center">
+                <i class="fas fa-video"></i>
+                <p>Video Editing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="section-pad bg-light-custom">
+    <div class="doodle-bg" aria-hidden="true">
+      <svg class="dk dk-svg" style="top:3%;right:3%;width:74px;height:74px" viewBox="0 0 74 74"><rect x="4" y="4" width="66" height="66" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="8 5" rx="6"/></svg>
+      <svg class="dk dk-svg" style="bottom:3%;left:2%;width:62px;height:62px" viewBox="0 0 62 62"><circle cx="31" cy="31" r="27" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/></svg>
+      <svg class="dk dk-svg" style="top:45%;left:2%;width:48px;height:48px" viewBox="0 0 48 48"><polygon points="24,3 44,44 4,44" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/></svg>
+      <span class="dk dk-code" style="top:10%;left:3%">//</span>
+      <span class="dk dk-code" style="bottom:12%;right:4%">{ }</span>
+      <span class="dk dk-dot" style="top:55%;right:3%"></span>
+      <span class="dk dk-ring" style="bottom:14%;right:8%;width:30px;height:30px"></span>
+    </div>
+    <div class="container">
+      <div class="section-header text-center mb-5 reveal-up">
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 reveal-up">
+        <button class="btn filter-btn active" data-filter="all">All</button>
+        <button class="btn filter-btn" data-filter="web">Web Projects</button>
+        <button class="btn filter-btn" data-filter="python">Python Projects</button>
+        <button class="btn filter-btn" data-filter="it">IT Projects</button>
+      </div>
+
+      <div class="row g-4" id="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project1.jpg" alt="E-commerce Website" class="project-img" onerror="this.src='https://placehold.co/600x350/0d6efd/ffffff?text=E-Commerce+Website'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge">Web</span>
+              <h5 class="project-title">E-Commerce Website</h5>
+              <p class="project-desc">A fully responsive online store with product listings, cart functionality, and a clean checkout interface.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Live Demo</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project2.jpg" alt="School Management System" class="project-img" onerror="this.src='https://placehold.co/600x350/222222/ffffff?text=School+Management'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge">Web</span>
+              <h5 class="project-title">School Management System</h5>
+              <p class="project-desc">A web-based system for managing student records, attendance, and results with a dashboard interface.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Live Demo</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="python">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project3.jpg" alt="Expense Tracker" class="project-img" onerror="this.src='https://placehold.co/600x350/198754/ffffff?text=Expense+Tracker'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge python-badge">Python</span>
+              <h5 class="project-title">Personal Expense Tracker</h5>
+              <p class="project-desc">A command-line Python application that tracks daily expenses, generates monthly reports, and stores data in CSV format.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">CSV</span>
+                <span class="tech-badge">CLI</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Live Demo</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="python">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project4.jpg" alt="Quiz App" class="project-img" onerror="this.src='https://placehold.co/600x350/6f42c1/ffffff?text=Python+Quiz+App'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge python-badge">Python</span>
+              <h5 class="project-title">Python Quiz Application</h5>
+              <p class="project-desc">An interactive quiz app built with Python and Tkinter. Features multiple categories, timer, and score tracking.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Tkinter</span>
+                <span class="tech-badge">JSON</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Live Demo</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="it">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project5.jpg" alt="Network Setup" class="project-img" onerror="this.src='https://placehold.co/600x350/fd7e14/ffffff?text=Network+Setup'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge it-badge">IT</span>
+              <h5 class="project-title">Office Network Setup</h5>
+              <p class="project-desc">Designed and implemented a local area network for a small business, including router configuration and workstation setup.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">Networking</span>
+                <span class="tech-badge">Windows</span>
+                <span class="tech-badge">Router Config</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Details</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="project-card h-100">
+            <div class="project-img-wrap">
+              <img src="images/project6.jpg" alt="Portfolio Website" class="project-img" onerror="this.src='https://placehold.co/600x350/dc3545/ffffff?text=Portfolio+Website'" />
+              <div class="project-overlay">
+                <a href="#" target="_blank" rel="noopener" class="overlay-btn"><i class="fas fa-external-link-alt"></i></a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="overlay-btn"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category-badge">Web</span>
+              <h5 class="project-title">Personal Portfolio Website</h5>
+              <p class="project-desc">This very portfolio — a modern, responsive personal website built with HTML5, CSS3, Bootstrap 5, and JavaScript.</p>
+              <div class="project-tech d-flex flex-wrap gap-2 mb-3">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">JavaScript</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-primary-custom"><i class="fas fa-eye me-1"></i>Live Demo</a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-custom"><i class="fab fa-github me-1"></i>GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /#projects-grid -->
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="section-pad">
+    <div class="doodle-bg" aria-hidden="true">
+      <span class="dk dk-code" style="top:6%;left:3%">&#123; &#125;</span>
+      <span class="dk dk-code" style="bottom:10%;right:4%">&lt;/&gt;</span>
+      <span class="dk dk-code" style="top:48%;right:2%">&#35;</span>
+      <svg class="dk dk-svg" style="top:3%;right:6%;width:68px;height:68px" viewBox="0 0 68 68"><polygon points="34,4 64,62 4,62" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+      <svg class="dk dk-svg" style="bottom:4%;left:3%;width:58px;height:58px" viewBox="0 0 58 58"><line x1="29" y1="2" x2="29" y2="56" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><line x1="2" y1="29" x2="56" y2="29" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/></svg>
+      <svg class="dk dk-svg" style="top:45%;left:2%;width:44px;height:44px" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/></svg>
+      <span class="dk dk-dot" style="top:38%;left:1.5%"></span>
+      <span class="dk dk-dot" style="top:62%;right:3%"></span>
+      <span class="dk dk-ring" style="top:14%;right:14%;width:22px;height:22px"></span>
+    </div>
+    <div class="container">
+      <div class="section-header text-center mb-5 reveal-up">
+        <span class="section-label">What I Offer</span>
+        <h2 class="section-title">My Services</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-sm-6 col-lg-3 reveal-up">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-tools"></i></div>
+            <h5 class="service-title">Computer Repair</h5>
+            <p class="service-desc">Diagnosing and repairing hardware faults, replacing components, and restoring system performance.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.1s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fab fa-windows"></i></div>
+            <h5 class="service-title">Windows Installation</h5>
+            <p class="service-desc">Clean installation and configuration of Windows OS, drivers, and essential software.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.2s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-file-word"></i></div>
+            <h5 class="service-title">MS Office Setup</h5>
+            <p class="service-desc">Installing and configuring Microsoft Office suite for personal and business use.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.3s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-download"></i></div>
+            <h5 class="service-title">Software Installation</h5>
+            <p class="service-desc">Installing, updating, and troubleshooting all types of software and applications.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.1s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+            <h5 class="service-title">Website Development</h5>
+            <p class="service-desc">Designing and developing modern, responsive websites for businesses and individuals.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.2s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-palette"></i></div>
+            <h5 class="service-title">Graphic Design</h5>
+            <p class="service-desc">Creating professional logos, banners, flyers, and social media graphics.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.3s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-video"></i></div>
+            <h5 class="service-title">Video Editing</h5>
+            <p class="service-desc">Editing and producing professional videos for content creation and business use.</p>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 reveal-up" style="animation-delay:0.4s">
+          <div class="service-card text-center h-100">
+            <div class="service-icon-wrap"><i class="fas fa-network-wired"></i></div>
+            <h5 class="service-title">Network Setup</h5>
+            <p class="service-desc">Planning and setting up home and office networks, Wi-Fi, and LAN configurations.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section-pad bg-light-custom">
+    <div class="doodle-bg" aria-hidden="true">
+      <span class="dk dk-code" style="top:7%;right:5%">( )</span>
+      <span class="dk dk-code" style="bottom:12%;left:4%">=&gt;</span>
+      <svg class="dk dk-svg" style="top:3%;left:4%;width:62px;height:62px" viewBox="0 0 62 62"><circle cx="31" cy="31" r="27" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+      <svg class="dk dk-svg" style="bottom:4%;right:4%;width:56px;height:56px" viewBox="0 0 56 56"><rect x="3" y="3" width="50" height="50" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4" rx="5"/></svg>
+      <span class="dk dk-dot" style="bottom:28%;left:3%"></span>
+      <span class="dk dk-dot" style="top:45%;right:3%"></span>
+      <span class="dk dk-ring" style="bottom:8%;left:10%;width:24px;height:24px"></span>
+    </div>
+    <div class="container">
+      <div class="section-header text-center mb-5 reveal-up">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="row gy-5 align-items-start">
+        <div class="col-lg-5 reveal-left">
+          <h4 class="contact-info-title">Let&apos;s Work Together</h4>
+          <p class="contact-info-text">
+            Have a project in mind or need IT support? Feel free to reach out.
+            I&apos;m always open to discussing new opportunities.
+          </p>
+          <div class="contact-details mt-4">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h6>Email</h6>
+                <a href="mailto:francis@example.com">francis@example.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h6>Phone</h6>
+                <a href="tel:+233000000000">+233 (0) 000 000 000</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h6>Location</h6>
+                <p>Ghana, West Africa</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials mt-4 d-flex gap-3">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-kusi-1b643a258" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal-right">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="contactName" class="form-label">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-control custom-input" placeholder="Francis Kusi" required />
+                <div class="invalid-feedback" id="nameError"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="contactEmail" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="contactEmail" name="email" class="form-control custom-input" placeholder="you@example.com" required />
+                <div class="invalid-feedback" id="emailError"></div>
+              </div>
+              <div class="col-12">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" id="contactSubject" name="subject" class="form-control custom-input" placeholder="How can I help you?" />
+              </div>
+              <div class="col-12">
+                <label for="contactMessage" class="form-label">Message <span class="required-star">*</span></label>
+                <textarea id="contactMessage" name="message" class="form-control custom-input" rows="5" placeholder="Write your message here..." required></textarea>
+                <div class="invalid-feedback" id="messageError"></div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom w-100" id="submitBtn">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+          <!-- Success Alert -->
+          <div id="formSuccess" class="form-success-popup d-none mt-3" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            Your message was sent successfully! I&apos;ll get back to you soon.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-4 text-center text-md-start">
+          <a class="footer-brand" href="#hero">
+            <img src="images/my logo.png" alt="Francis Kusi" class="brand-logo brand-logo-footer" />
+          </a>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="footer-socials d-flex justify-content-center gap-3">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/francis-kusi-1b643a258" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:francis@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="footer-copy mb-0">&copy; <span id="year"></span> Francis Kusi. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/233201453942" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-fab-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <script>
+  /* ---- Page Loader ---- */
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) { loader.classList.add('hidden'); }
+  });
+
+  /* ---- Scroll Progress Bar ---- */
+  (function() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (window.scrollY / max * 100) + '%';
+    }, { passive: true });
+  })();
+
+  /* ---- Hamburger X Toggle ---- */
+  (function() {
+    const navbar   = document.getElementById('mainNavbar');
+    const collapse = document.getElementById('navbarNav');
+    if (!collapse || !navbar) return;
+    collapse.addEventListener('show.bs.collapse',  () => navbar.classList.add('menu-open'));
+    collapse.addEventListener('hide.bs.collapse',  () => navbar.classList.remove('menu-open'));
+  })();
+
+  /* ---- Button Ripple ---- */
+  document.querySelectorAll('.btn-primary-custom, .btn-outline-custom, .btn-ghost-custom').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const r = document.createElement('span');
+      r.className = 'btn-ripple';
+      const size = Math.max(this.offsetWidth, this.offsetHeight);
+      r.style.cssText = `width:${size}px;height:${size}px;top:${e.offsetY - size/2}px;left:${e.offsetX - size/2}px`;
+      this.appendChild(r);
+      r.addEventListener('animationend', () => r.remove());
+    });
+  });
+
+  /* ---- Counter Roll ---- */
+  const counters = document.querySelectorAll('.counter-num');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.getAttribute('data-target');
+      const dur = 1600;
+      const step = target / (dur / 16);
+      let cur = 0;
+      const tick = () => {
+        cur = Math.min(cur + step, target);
+        el.textContent = Math.floor(cur) + (cur >= target ? '+' : '');
+        if (cur < target) requestAnimationFrame(tick);
+      };
+      tick();
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(c => counterObs.observe(c));
+
+  /* ---- Title Underline Animate ---- */
+  document.querySelectorAll('.section-header').forEach(header => {
+    const underline = header.querySelector('.title-underline');
+    if (!underline) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) { underline.classList.add('active'); obs.disconnect(); }
+    }, { threshold: 0.4 });
+    obs.observe(header);
+  });
+
+  /* ---- Card 3D Tilt ---- */
+  document.querySelectorAll('.project-card, .service-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width  / 2;
+      const y = e.clientY - r.top  - r.height / 2;
+      const tiltX = -(y / (r.height / 2)) * 5;
+      const tiltY =  (x / (r.width  / 2)) * 5;
+      card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+  </script>
+</body>
+</html>
