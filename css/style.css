@@ -1565,7 +1565,11 @@ html, body { overflow-x: hidden; }
   50%       { transform: translateY(-8px); }
 }
 @media (max-width: 991px) {
-  .hero-stat { display: none; }
+  .hero-stat {
+    position: static;
+    animation: none;
+    transform: none !important;
+  }
 }
 
 /* ---- Back to top pulse ring ---- */

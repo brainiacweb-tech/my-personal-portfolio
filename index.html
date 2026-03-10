@@ -90,7 +90,7 @@
             <a href="mailto:francis@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-center reveal-right">
+        <div class="col-lg-6 order-1 order-lg-2 d-flex flex-column align-items-center reveal-right">
           <div class="profile-wrapper">
             <img src="images/image 1.jpg" alt="Francis Kusi" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Francis+Kusi&size=400&background=0d6efd&color=fff&bold=true&font-size=0.33'" />
             <div class="profile-ring"></div>
@@ -98,15 +98,32 @@
             <div class="profile-dot dot-1"></div>
             <div class="profile-dot dot-2"></div>
             <div class="profile-dot dot-3"></div>
-            <!-- Floating stat badges -->
-            <div class="hero-stat stat-projects">
+            <!-- Floating stat badges (desktop) -->
+            <div class="hero-stat stat-projects d-none d-lg-flex">
               <div class="hero-stat-icon"><i class="fas fa-code"></i></div>
               <div>
                 <div class="hero-stat-num counter-num" data-target="20">0</div>
                 <div class="hero-stat-label">Projects Done</div>
               </div>
             </div>
-            <div class="hero-stat stat-exp">
+            <div class="hero-stat stat-exp d-none d-lg-flex">
+              <div class="hero-stat-icon"><i class="fas fa-star"></i></div>
+              <div>
+                <div class="hero-stat-num counter-num" data-target="3">0</div>
+                <div class="hero-stat-label">Years Exp.</div>
+              </div>
+            </div>
+          </div>
+          <!-- Stat badges visible on mobile only -->
+          <div class="hero-stat-row d-flex d-lg-none gap-3 mt-3 justify-content-center flex-wrap">
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><i class="fas fa-code"></i></div>
+              <div>
+                <div class="hero-stat-num counter-num" data-target="20">0</div>
+                <div class="hero-stat-label">Projects Done</div>
+              </div>
+            </div>
+            <div class="hero-stat">
               <div class="hero-stat-icon"><i class="fas fa-star"></i></div>
               <div>
                 <div class="hero-stat-num counter-num" data-target="3">0</div>
