@@ -606,6 +606,7 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   object-fit: cover;
+  object-position: top center;
   aspect-ratio: 3/4;
 }
 
